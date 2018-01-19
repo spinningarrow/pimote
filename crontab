@@ -1,0 +1,3 @@
+@reboot java -jar /home/pi/sahil/pimote-api-0.1.0-SNAPSHOT-standalone.jar >> /home/pi/sahil/logs/pimote-api.out 2>> /home/pi/sahil/logs/pimote-api.err
+@reboot cd /home/pi/sahil/pimote-ui && python -m SimpleHTTPServer >> /home/pi/sahil/logs/pimote-ui.out 2>> /home/pi/sahil/logs/pimote-ui.err
+@reboot cd /home/pi/sahil/pimote-alexa-listener-master && env $(cat secrets.sh) npm start >> /home/pi/sahil/logs/pimote-alexa-listener.out 2>> /home/pi/sahil/logs/pimote-alexa-listener.err
